@@ -104,3 +104,6 @@ ENV/
 
 !networks/models/lecun_net.h5
 !networks/models/resnet.h5
+
+.russellexpt
+.russellignore
