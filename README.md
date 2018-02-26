@@ -1,4 +1,7 @@
 # One Pixel Attack
+`
+russell run --mode jupyter --data 9727e7f8109f46a49823ccc35b2d9959:cifar-10
+`
 
 [![Who would win?](images/who-would-win.jpg "one thicc boi that's who")](https://www.reddit.com/r/ProgrammerHumor/comments/79g0m6/one_pixel_attack_for_fooling_deep_neural_networks/?ref=share&ref_source=link)
 
