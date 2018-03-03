@@ -1,9 +1,32 @@
 # One Pixel Attack
-`
-russell run --mode jupyter --data 9727e7f8109f46a49823ccc35b2d9959:cifar-10
-`
 
-[![Who would win?](images/who-would-win.jpg "one thicc boi that's who")](https://www.reddit.com/r/ProgrammerHumor/comments/79g0m6/one_pixel_attack_for_fooling_deep_neural_networks/?ref=share&ref_source=link)
+### 使用 RussellCloud 两步复现 One Pixel Attack
+
+#### 步骤一：
+
+搞定一个平台账号，[点我](http://russellcloud.com/welcome)，创建名为 `one-pixel-attack-keras` 的 `keras` 项目。
+
+```bash
+pip install -U russell-cli
+```
+
+#### 步骤二：
+
+克隆复现
+
+```bash
+git clone git@github.com:RussellCloud/one-pixel-attack-keras.git
+cd one-pixel-attack-keras
+russell login
+russell init --name one-pixel-attack-keras
+russell run --mode jupyter --data 9727e7f8109f46a49823ccc35b2d9959:cifar-10
+```
+
+
+
+---
+
+![Who would win?](images/who-would-win.jpg "one thicc boi that's who")
 
 How simple is it to cause a deep neural network to misclassify an image if we are only allowed to modify the color of one pixel and only see the prediction probability? Turns out it is very simple. In many cases, we can even cause the network to return any answer we want.
 
@@ -63,18 +86,3 @@ Preliminary results after running several experiments:
 The success rate is much lower than demonstrated in the paper, but that's mostly due to an inefficient differential evolution implementation. This should be fixed soon.
 
 It appears that the capsule network CapsNet, while more resilient to the one pixel attack than all other CNNs, is still vulnerable.
-
-## Training and Testing
-
-TODO: need to implement a CLI!
-
-## Milestones
-
-- [x] Cifar10 dataset
-- [x] Tutorial notebook
-- [x] Lecun Network, Network in Network, Residual Network, DenseNet models
-- [x] CapsNet (capsule network) model
-- [ ] Configurable command-line interface
-- [ ] Efficient differential evolution implementation
-- [ ] MNIST dataset
-- [ ] ImageNet dataset
